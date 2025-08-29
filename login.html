@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom vibrant background + styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fde68a;
+      background-image: linear-gradient(
+        315deg,
+        #fde68a 0%,
+        #fce38a 30%,
+        #f9d423 50%,
+        #ff4e50 70%,
+        #f9d423 90%,
+        #fce38a 100%
+      );
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .fade-in { animation: fadeIn 0.5s ease-in-out forwards; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+
+  <div class="glass-card shadow-xl w-96 p-8 fade-in">
+    <h2 class="text-2xl font-bold text-center text-pink-600 mb-6">Welcome Back</h2>
+    
+    <!-- Dummy Login Form -->
+    <form action="index.html" method="GET" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 text-sm mb-2">Email</label>
+        <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-pink-300" required>
+      </div>
+      <div>
+        <label class="block text-gray-700 text-sm mb-2">Password</label>
+        <input type="password" placeholder="Enter your password" class="w-full px-3 py-2 border rounded-lg focus:ring focus:ring-pink-300" required>
+      </div>
+      <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition">
+        Continue
+      </button>
+    </form>
+
+    <div class="my-6 flex items-center">
+      <hr class="flex-grow border-gray-300">
+      <span class="px-3 text-gray-500 text-sm">OR</span>
+      <hr class="flex-grow border-gray-300">
+    </div>
+
+    <!-- Continue with Google -->
+    <a href="index.html" class="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg shadow-lg transition mb-3">
+      Continue with Google
+    </a>
+    
+    <!-- Continue with Facebook -->
+    <a href="index.html" class="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg shadow-lg transition mb-3">
+      Continue with Facebook
+    </a>
+    
+    <!-- Continue as Guest -->
+    <a href="index.html" class="w-full flex items-center justify-center bg-gray-600 hover:bg-gray-700 text-white py-2 rounded-lg shadow-lg transition">
+      Continue as Guest
+    </a>
+  </div>
+
+</body>
+</html>
